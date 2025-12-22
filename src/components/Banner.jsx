@@ -30,7 +30,7 @@ export default function BannerSection() {
       >
         {/* Left Content */}
         <div className="relative z-10 w-full lg:w-1/2 space-y-4 sm:space-y-6 md:space-y-8 text-center lg:text-left max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto lg:mx-0">
-          <p className="text-5xl lg:text-6xl font-bold text-gray-900 m-0 leading-tight">
+          <p className="text-5xl lg:text-6xl font-bold text-white lg:text-gray-900 m-0 leading-tight">
             Zentrix Media
           </p>
           <p className="lg:text-gray-900 text-white text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed px-2 lg:px-0">

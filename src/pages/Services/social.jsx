@@ -92,10 +92,10 @@ useEffect(() => {
 >
         <div className="absolute inset-0  bg-black/50"></div>
         <div className="relative max-w-6xl mx-auto pt-30">
-           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-gray-800 mb-4">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold mb-6 text-white leading-tight animate-fade-in-up">
             {headline}
           </h1>
-         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+         <p className="text-lg sm:text-xl md:text-2xl text-white/70 mb-8 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
             {subheadline}
           </p>
           <Link 
@@ -111,22 +111,29 @@ useEffect(() => {
       </header>
 
 <EnquiryModal isOpen={isEnquiryOpen} onClose={closeEnquiry} />
-<section className="py-20 bg-blue-900/10">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-              Mastering the Attention Economy
-            </h2>
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-              {detailedIntro}
-            </p>
-          </div>
-          <div className="rounded-3xl overflow-hidden shadow-2xl">
-            <img 
-              src="https://images.pexels.com/photos/5380792/pexels-photo-5380792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" // Professional team/content creation
-              alt="Attention Economy in Action"
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
-            />
+
+        
+            <section className="py-20 bg-blue-900/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Image - moves to top on mobile */}
+            <div className="rounded-3xl overflow-hidden shadow-2xl md:order-2">
+              <img 
+                src="https://images.pexels.com/photos/5380792/pexels-photo-5380792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="Attention Economy in Action"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+              />
+            </div>
+
+            {/* Text content */}
+            <div className="space-y-8 md:order-1">
+              <h2 className="text-4xl md:text-6xl font-semibold text-gray-900 leading-tight">
+               Mastering the Attention Economy
+              </h2>
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                {detailedIntro}
+              </p>
+            </div>
           </div>
         </div>
       </section>

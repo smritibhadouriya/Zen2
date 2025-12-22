@@ -11,7 +11,6 @@ const Performance = () => {
   const location = useLocation();
   const [offsetY, setOffsetY] = useState(0);
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
-
   const openEnquiry = () => setIsEnquiryOpen(true);
   const closeEnquiry = () => setIsEnquiryOpen(false);
 
@@ -65,54 +64,59 @@ const Performance = () => {
         keywords={seoData.keywords}
         href={seoData.href}
       />
-
       {/* Hero Header - Matches Social exactly (dark overlay, white text) */}
       <header
-        className="relative text-center py-20  px-4 md:px-8 bg-cover bg-no-repeat overflow-hidden"
+        className="relative text-center py-20 px-4 md:px-8 bg-cover bg-no-repeat overflow-hidden"
         style={{
           backgroundImage: `url(${background})`,
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-6xl mx-auto pt-30">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-gray-800 mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold mb-6 text-white leading-tight animate-fade-in-up">
             {headline}
           </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/70 mb-8 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
             {subheadline}
           </p>
           <Link
-           onClick={openEnquiry}
+            onClick={openEnquiry}
             className="inline-flex items-center px-8 py-4 bg-pink-600 text-white font-bold text-lg rounded-full hover:bg-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse-slow relative z-10"
           >
             Scale Your ROI <FaRocket className="ml-2" />
           </Link>
         </div>
       </header>
-<EnquiryModal isOpen={isEnquiryOpen} onClose={closeEnquiry} />
+
+      <EnquiryModal isOpen={isEnquiryOpen} onClose={closeEnquiry} />
+
       {/* Detailed Intro Section - Matches Social (light background, text left, image right) */}
-         <section className="py-20 bg-blue-900/10">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-               Data-Driven Performance Mastery
-            </h2>
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-              {detailedIntro}
-            </p>
-          </div>
-          <div className="rounded-3xl overflow-hidden shadow-2xl">
-            <img 
-              src="https://images.pexels.com/photos/5380792/pexels-photo-5380792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" // Professional team/content creation
-              alt="Attention Economy in Action"
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
-            />
+      <section className="py-20 bg-blue-900/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Image - moves to top on mobile */}
+            <div className="rounded-3xl overflow-hidden shadow-2xl md:order-2">
+              <img
+                src="https://images.pexels.com/photos/5380792/pexels-photo-5380792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="Attention Economy in Action"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+              />
+            </div>
+            {/* Text content */}
+            <div className="space-y-8 md:order-1">
+              <h2 className="text-4xl md:text-6xl font-semibold text-gray-900 leading-tight">
+                Data-Driven Performance Mastery
+              </h2>
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                {detailedIntro}
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* What We Deliver - Identical layout to Social (single centered row for 3 items) */}
-      <section className="relative overflow-hidden py-14 md:py-10"
+      <section className="relative overflow-hidden py-14 md:py-20"
         style={{
           background: 'linear-gradient(180deg, #111488 0%, #0d1066 100%)',
         }}>
@@ -163,15 +167,14 @@ const Performance = () => {
       </section>
 
       {/* The Zentrix Edge - Matches Social (subtle fade-in on scroll) */}
-        <section className=" p-12 md:p-16 text-center animate-slide-in bg-blue-900/10">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            The Zentrix Edge
-          </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto font-semibold leading-relaxed">
-            {zentrixEdge}
-          </p>
-         
-        </section>
+      <section className="p-12 md:p-16 text-center animate-slide-in bg-blue-900/10">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          The Zentrix Edge
+        </h2>
+        <p className="text-xl text-gray-700 max-w-3xl mx-auto font-semibold leading-relaxed">
+          {zentrixEdge}
+        </p>
+      </section>
 
       <Contactcomp />
 
