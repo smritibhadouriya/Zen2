@@ -7,7 +7,6 @@ export const footerData = {
     description: 'Leading digital marketing agency providing comprehensive solutions for modern businesses. We help brands grow through innovative digital strategies.',
     socialLinks: [
       { href: '#', icon: FaFacebook , label: 'Facebook' },
-      { href: '#', icon: FaInstagram , label: 'Instagram' },
       { href: '#', icon: FaLinkedin, label: 'LinkedIn' },
       { href: '#', icon: FaTwitter, label: 'Twitter' },
     ],

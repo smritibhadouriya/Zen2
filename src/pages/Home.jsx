@@ -64,16 +64,6 @@ const Home = () => {
 <AboutZentrix />
     <Contactcomp />
 
-      {/* Scroll to Top Button */}
-      <button
-        onClick={scrollToTop}
-        className={`fixed bottom-6 right-6 p-4 bg-pink-600 text-white rounded-full shadow-lg transition-opacity duration-300 hover:bg-pink-700 focus:outline-none ${
-          showScrollTop ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
-        aria-label="Scroll to top of the page"
-      >
-        <FaArrowUp size={20} />
-      </button>
     </div>
   );
 };

@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="bg-gray-900 px-6 py-12 md:px-8 md:py-16 lg:px-40 lg:py-24 relative overflow-hidden text-white"
+      className="bg-gray-900 px-6 py-12 md:px-8 md:py-16  lg:py-24 relative overflow-hidden text-white"
     >
       {/* Subtle Background Overlay */}
       <div className="absolute inset-0 bg-pink-500/5 pointer-events-none"></div>
@@ -26,7 +26,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Section */}
           <div className="space-y-4">
-           <img src={Logo} className='bg-white h-40 w-40' alt='company logo'/>
+           <img src={Logo} className='bg-white h-20 w-20 md:h-40 md:w-40' alt='company logo'/>
             <div className="flex space-x-5">
               {footerData.company.socialLinks.map((link, index) => {
                 const Icon = link.icon;
@@ -38,7 +38,7 @@ const Footer = () => {
                     aria-label={`Visit our ${link.label}`}
                     role="link"
                   >
-                    <Icon className="w-7 h-7" />
+                    <Icon className="w-5 h-5 md:w-7 md:h-7" />
                   </Link>
                 );
               })}

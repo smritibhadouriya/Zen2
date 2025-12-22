@@ -1,9 +1,34 @@
-import { useEffect, useState } from "react";
-import ParallaxBackground from "./Parallex";
-import dotted from '../assets/dj.png';
+import { useState } from "react";
+import { } from "react-icons/fi"; // From Feather Icons (light & modern)
+import Performance1 from "../assets/imagesuse/performance.jpg";
+import social from "../assets/imagesuse/social.jpg";
+import web from "../assets/imagesuse/web.jpg";
+import { BiMinusCircle, BiPlusCircle } from "react-icons/bi";
 
 export default function Chooseus() {
-  const [currentStat, setCurrentStat] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
+
+  const tabs = [
+    {
+      title: "Social & Content",
+      description:
+        "From scroll-stopping Instagram Reels to LinkedIn thought leadership. We create compelling content that holds your attention and gets your likes.",
+      image: social,
+    },
+    {
+      title: "Performance Marketing",
+      description:
+        "Paid ads that actually pay off. We use predictive algorithms to bid smarter, lowering CPC and increasing ROI.",
+      image: Performance1,
+    },
+    {
+      title: "Web & Tech",
+      description:
+        "Websites that load faster than you can say 'conversion rate.' Modern, scalable, and conversion-optimized tech solutions.",
+      image: web,
+    },
+  ];
+
   const stats = [
     { value: "50+", label: "Brands Scaled" },
     { value: "1.5M+", label: "Organic Reach Generated Last Month" },
@@ -11,130 +36,96 @@ export default function Chooseus() {
     { value: "24/7", label: "Real-time Optimization" },
   ];
 
-  // Auto-rotate every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentStat((prev) => (prev + 1) % stats.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const prevStat = (currentStat - 1 + stats.length) % stats.length;
-  const nextStat = (currentStat + 1) % stats.length;
-
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden bg-white">
-      {/* Single Parallax Background for the entire section */}
-      <ParallaxBackground speed={1} />
+    <section className="relative overflow-hidden bg-blue-900/10">
+      {/* 360° Digital Domination Section */}
+      <div className="relative z-10 py-10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-gray-800 mb-4">
+              360° Digital Domination
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Comprehensive strategies that cover every angle of your digital presence.
+            </p>
+          </div>
 
-      {/* First Part: 360° Digital Domination + Cards */}
-      <div className="relative z-10 flex-1 flex items-center justify-center">
-        <div className="max-w-6xl mx-auto px-6 py-20 text-center w-full">
-          <h2 className="text-5xl md:text-6xl text-gray-800 mb-8">
-            360° Digital Domination
-          </h2>
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-600 mb-20 max-w-4xl mx-auto leading-relaxed">
-            Comprehensive strategies that cover every angle of your
-            <br className="hidden md:block" />
-            digital presence.
-          </p>
+          {/* Responsive Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-20 items-start">
+            {/* Tabs */}
+            <div className="space-y-4 lg:space-y-6 order-1 lg:order-2">
+              {tabs.map((tab, index) => {
+                const isActive = activeTab === index;
 
-          {/* Minimal Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-7xl mx-auto">
-            <div className="backdrop-blur-sm bg-white/50 border border-white/40 rounded-3xl p-10 shadow-xl transition-all duration-500 hover:bg-white/70 hover:shadow-2xl">
-              <h3 className="text-2xl lg:text-3xl font-medium text-gray-900 mb-5">
-                Social & Content
-              </h3>
-              <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
-                From scroll-stopping Instagram Reels to LinkedIn thought leadership. We create compelling content that holds your attention and gets your likes.
-              </p>
+                return (
+                  <div
+                    key={index}
+                    onClick={() => setActiveTab(isActive ? -1 : index)} // Toggle open/close
+                    className={`cursor-pointer rounded-2xl sm:rounded-3xl p-6 sm:p-8 transition-all duration-500 backdrop-blur-sm border flex items-start gap-5 group ${
+                      isActive
+                        ? "bg-white/90 border-white/70 shadow-2xl scale-100 lg:scale-105"
+                        : "bg-white/40 border-white/30 hover:bg-white/60"
+                    }`}
+                  >
+                  
+
+                    {/* Content */}
+                    <div className="flex-1">
+                      <h3 className="text-xl sm:text-2xl font-medium text-gray-900 mb-3">
+                        {tab.title}
+                      </h3>
+                      <p
+                        className={`text-sm sm:text-base lg:text-xl text-gray-600 leading-relaxed transition-all duration-500 overflow-hidden ${
+                          isActive ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                        }`}
+                      >
+                        {tab.description}
+                      </p>
+                    </div>
+
+                      {/* Plus / Minus Circle Icon */}
+                    <div className="flex-shrink-0 transition-all duration-300">
+                      {isActive ? (
+                        <BiMinusCircle className="w-5 h-5  text-pink-500" />
+                      ) : (
+                        <BiPlusCircle className="w-5 h-5  text-blue-500 group-hover:scale-110 transition-transform" />
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-            <div className="backdrop-blur-sm bg-white/50 border border-white/40 rounded-3xl p-10 shadow-xl transition-all duration-500 hover:bg-white/70 hover:shadow-2xl">
-              <h3 className="text-2xl lg:text-3xl font-medium text-gray-900 mb-5">
-                Performance Marketing
-              </h3>
-              <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
-                Paid ads that actually pay off. We use predictive algorithms to bid smarter, lowering CPC and increasing ROI.
-                <br className="hidden md:block" />
-              </p>
-            </div>
-            <div className="backdrop-blur-sm bg-white/50 border border-white/40 rounded-3xl p-10 shadow-xl transition-all duration-500 hover:bg-white/70 hover:shadow-2xl">
-              <h3 className="text-2xl lg:text-3xl font-medium text-gray-900 mb-5">
-                Web & Tech
-              </h3>
-              <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
-                Websites that load faster than you can say 'conversion rate.'
-              </p>
+
+            {/* Image (hidden on mobile) */}
+            <div className="hidden md:block relative h-64 sm:h-80 lg:h-96 xl:h-[490px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl order-2 lg:order-1">
+              <img
+                src={tabs[activeTab === -1 ? 0 : activeTab].image}
+                alt={tabs[activeTab === -1 ? 0 : activeTab].title}
+                className="w-full h-full object-cover transition-all duration-700 ease-in-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Second Part: Numbers Don't Lie - Full Width Dotted Background */}
-      <div className="relative z-10 w-full py-32 overflow-hidden">
-        {/* Full-width dotted background */}
-        <div
-          className="absolute inset-0 opacity-15 -z-10"
-          style={{
-            backgroundImage: `url(${dotted})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-          }}
-        />
-
-        <div className="px-6 text-center">
-          <h3 className="text-3xl lg:text-4xl font-medium text-gray-800 mb- tracking-wide">
-            Numbers Don't Lie
-          </h3>
-          <div className="relative h-96 flex items-center justify-center">
-            {/* Previous Stat */}
-            <div className="absolute top-8 flex flex-col items-center opacity-30 scale-75 transition-all duration-700">
-              <div className="text-3xl md:text-4xl text-gray-700">
-                {stats[prevStat].value}
+      {/* Stats Section */}
+      <div className="relative z-10 w-full py-16 sm:py-20 bg-[#111488]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+            {stats.map((stat, index) => (
+              <div key={index} className="flex flex-col items-center text-center">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 tracking-tight">
+                  {stat.value}
+                </div>
+                <div className="text-sm sm:text-base lg:text-lg text-white/80 leading-relaxed max-w-xs">
+                  {stat.label}
+                </div>
               </div>
-              <div className="text-sm md:text-base text-gray-500 mt-2">
-                {stats[prevStat].label}
-              </div>
-            </div>
-
-            {/* Current Stat */}
-            <div className="flex flex-col items-center transition-all duration-700">
-              <div className="text-6xl lg:text-7xl font-bold text-gray-900 mb-4 tracking-tight">
-                {stats[currentStat].value}
-              </div>
-              <div className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-2xl mx-auto text-center leading-relaxed">
-                {stats[currentStat].label}
-              </div>
-            </div>
-
-            {/* Next Stat */}
-            <div className="absolute bottom-8 flex flex-col items-center opacity-30 scale-75 transition-all duration-700">
-              <div className="text-3xl md:text-4xl text-gray-700">
-                {stats[nextStat].value}
-              </div>
-              <div className="text-sm md:text-base text-gray-500 mt-2">
-                {stats[nextStat].label}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
-
-      {/* Breathing Animation */}
-      <style jsx>{`
-        @keyframes breathe {
-          0%,
-          100% {
-            opacity: 0.7;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 0.95;
-            transform: scale(1.2);
-          }
-        }
-      `}</style>
     </section>
   );
 }

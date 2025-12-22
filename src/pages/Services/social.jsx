@@ -9,10 +9,15 @@ import SocialBanner from "../../assets/service/social.png"; // Banner image
 import background from  '../../assets/bannerbg1.jpeg'
 import Contactcomp from "../../components/Contactcomp";
 import ParallaxBackground from "../../components/Parallex";
+import EnquiryModal from '../../components/Enquiry'; // Adjust the path if needed
 
 const Social = () => {
   const location = useLocation();
   const [offsetY, setOffsetY] = useState(0);
+  const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+
+  const openEnquiry = () => setIsEnquiryOpen(true);
+  const closeEnquiry = () => setIsEnquiryOpen(false);
 
 useEffect(() => {
   const handleScroll = () => setOffsetY(window.scrollY);
@@ -79,158 +84,144 @@ useEffect(() => {
       
       {/* Hero Header */}
     <header 
-  className="relative text-center py-20 md:py-32 px-4 md:px-8 bg-cover bg-no-repeat overflow-hidden"
+  className="relative text-center py-20  px-4 md:px-8 bg-cover bg-no-repeat overflow-hidden"
   style={{
-    backgroundImage: `url(${background})`,
-    backgroundPosition: `center ${offsetY * 0.4}px`,
+     backgroundImage: `url('https://media.gettyimages.com/id/1467438291/photo/connecting-with-social-media-network-via-smartphone.jpg?s=612x612&w=0&k=20&c=wxzoqsTy-lzDuda7TqIFts_qhdVYVIlJGCC383d2tRA=')`,
+   
   }}
 >
-        <div className="absolute inset-0  bg-white/10"></div>
+        <div className="absolute inset-0  bg-black/50"></div>
         <div className="relative max-w-6xl mx-auto pt-30">
-          <h1 className="text-5xl md:text-6xl  font-semibold mb-6 text-gray-900 leading-tight animate-fade-in-up">
+           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-gray-800 mb-4">
             {headline}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
+         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             {subheadline}
           </p>
           <Link 
-            to="/contact" 
+           onClick={openEnquiry}
             className="inline-flex items-center px-8 py-4 bg-pink-600 text-white font-bold text-lg rounded-full hover:bg-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse-slow relative z-10"
           >
             Ignite Your Brand <FaRocket className="ml-2" />
           </Link>
           <div className="mt-12 relative z-10">
-            <Link className="text-sm text-gray-500 hover:text-gray-700 transition-colors">
-              Home / Services / Social Media Marketing
-            </Link>
+    
           </div>
         </div>
       </header>
 
-
-<section className="relative overflow-hidden min-h-screen">
-  {/* PARALLAX BACKGROUND */}
-  <ParallaxBackground speed={0.6} />
-
-  {/* CONTENT CONTAINER */}
-  <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-8 lg:px-16">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-screen">
-      
-      <div className="order-2 lg:order-1 space-y-8">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 leading-tight">
-          Mastering the Attention Economy
-        </h2>
-
-        <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-          {detailedIntro}
-        </p>
-      </div>
-
-      <div className="order-1 lg:order-2">
-        <img
-          src="https://media.gettyimages.com/id/1495076182/photo/close-up-of-young-woman-using-smartphone-on-social-media-network-application-viewing-posts.jpg?s=612x612&w=0&k=20&c=P4IrTU9PcvbyReCt7mgQRp4SZju6WnsbfS-TpPdrBXM="
-          alt="Attention Economy in Action"
-          className="w-full rounded-3xl shadow-2xl object-cover hover:scale-105 transition-transform duration-700"
-        />
-      </div>
-
-    </div>
-  </div>
-</section>
+<EnquiryModal isOpen={isEnquiryOpen} onClose={closeEnquiry} />
+<section className="py-20 bg-blue-900/10">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8">
+            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+              Mastering the Attention Economy
+            </h2>
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              {detailedIntro}
+            </p>
+          </div>
+          <div className="rounded-3xl overflow-hidden shadow-2xl">
+            <img 
+              src="https://images.pexels.com/photos/5380792/pexels-photo-5380792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" // Professional team/content creation
+              alt="Attention Economy in Action"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+            />
+          </div>
+        </div>
+      </section>
 
 
 
-            {/* What We Deliver - Redesigned with right-side lines per row */}
-        <section className="relative overflow-hidden py-14 md:py-10"
-         style={{
-        background: 'linear-gradient(180deg, #111488 0%, #0d1066 100%)',
-      }}>
-          {/* Decorative overlay for depth */}
-          <div className="absolute inset-0 bg-white/10"></div>
-          <div className="relative max-w-6xl mx-auto px-4 md:px-8 space-y-8 md:space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
-                What We Deliver
-              </h2>
+       <section className="relative overflow-hidden py-14 md:py-10"
+        style={{
+          background: 'linear-gradient(180deg, #111488 0%, #0d1066 100%)',
+        }}>
+        <div className="absolute inset-0 bg-white/10"></div>
+        <div className="relative max-w-6xl mx-auto px-4 md:px-8 space-y-8 md:space-y-12">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
+              What We Deliver
+            </h2>
+          </div>
+          <div className="space-y-2 lg:space-y-4">
+            {/* Top row: 3 items */}
+            <div className="flex flex-col lg:flex-row divide-y-2 lg:divide-y-0 lg:divide-x-2 divide-white/20">
+              {whatWeDeliver.slice(0, 3).map((item, index) => {
+                const { ref, inView } = useInView({
+                  triggerOnce: true,
+                  threshold: 0.1,
+                  rootMargin: '0px 0px -50px 0px'
+                });
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={index}
+                    ref={ref}
+                    className={`flex-1 p-4 md:p-6 transition-all duration-700 ${
+                      inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                    }`}
+                    style={{
+                      animationDelay: `${index * 200}ms`
+                    }}
+                  >
+                    <div className="text-center space-y-3 group h-full flex flex-col justify-center">
+                      <div className="flex justify-center">
+                        <Icon className="text-3xl md:text-4xl text-pink-300 group-hover:scale-110 transition-transform duration-300" />
+                      </div>
+                      <h3 className="text-lg md:text-xl font-bold text-white">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-100 leading-relaxed text-sm md:text-base">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-            <div className="space-y-2 lg:space-y-4">
-              {/* Top row: 3 items */}
-              <div className="flex flex-col lg:flex-row divide-y-2 lg:divide-y-0 lg:divide-x-2 divide-white/20">
-                {whatWeDeliver.slice(0, 3).map((item, index) => {
-                  const { ref, inView } = useInView({ 
-                    triggerOnce: true, 
-                    threshold: 0.1,
-                    rootMargin: '0px 0px -50px 0px'
-                  });
-                  const Icon = item.icon;
-                  return (
-                    <div
-                      key={index}
-                      ref={ref}
-                      className={`flex-1 p-4 md:p-6 transition-all duration-700 ${
-                        inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-                      }`}
-                      style={{
-                        animationDelay: `${index * 200}ms`
-                      }}
-                    >
-                      <div className="text-center space-y-3 group h-full flex flex-col justify-center">
-                        <div className="flex justify-center">
-                          <Icon className="text-3xl md:text-4xl text-pink-300 group-hover:scale-110 transition-transform duration-300" />
-                        </div>
-                        <h3 className="text-lg md:text-xl font-bold text-white">
-                          {item.title}
-                        </h3>
-                        <p className="text-gray-100 leading-relaxed text-sm md:text-base">
-                          {item.description}
-                        </p>
+            {/* Bottom row: 2 items */}
+            <div className="flex flex-col lg:flex-row divide-y-2 lg:divide-y-0 lg:divide-x-2 divide-white/20 lg:justify-start">
+              {whatWeDeliver.slice(3, 5).map((item, index) => {
+                const globalIndex = index + 3;
+                const { ref, inView } = useInView({
+                  triggerOnce: true,
+                  threshold: 0.1,
+                  rootMargin: '0px 0px -50px 0px'
+                });
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={globalIndex}
+                    ref={ref}
+                    className={`flex-1 lg:flex-none lg:w-1/2 p-4 md:p-6 transition-all duration-700 ${
+                      inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                    }`}
+                    style={{
+                      animationDelay: `${globalIndex * 200}ms`
+                    }}
+                  >
+                    <div className="text-center space-y-3 group h-full flex flex-col justify-center">
+                      <div className="flex justify-center">
+                        <Icon className="text-3xl md:text-4xl text-pink-300 group-hover:scale-110 transition-transform duration-300" />
                       </div>
+                      <h3 className="text-lg md:text-xl font-bold text-white">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-100 leading-relaxed text-sm md:text-base">
+                        {item.description}
+                      </p>
                     </div>
-                  );
-                })}
-              </div>
-              {/* Bottom row: 2 items */}
-              <div className="flex flex-col lg:flex-row divide-y-2 lg:divide-y-0 lg:divide-x-2 divide-white/20 lg:justify-start">
-                {whatWeDeliver.slice(3, 5).map((item, index) => {
-                  const globalIndex = index + 3;
-                  const { ref, inView } = useInView({ 
-                    triggerOnce: true, 
-                    threshold: 0.1,
-                    rootMargin: '0px 0px -50px 0px'
-                  });
-                  const Icon = item.icon;
-                  return (
-                    <div
-                      key={globalIndex}
-                      ref={ref}
-                      className={`flex-1 lg:flex-none lg:w-1/2 p-4 md:p-6 transition-all duration-700 ${
-                        inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-                      }`}
-                      style={{
-                        animationDelay: `${globalIndex * 200}ms`
-                      }}
-                    >
-                      <div className="text-center space-y-3 group h-full flex flex-col justify-center">
-                        <div className="flex justify-center">
-                          <Icon className="text-3xl md:text-4xl text-pink-300 group-hover:scale-110 transition-transform duration-300" />
-                        </div>
-                        <h3 className="text-lg md:text-xl font-bold text-white">
-                          {item.title}
-                        </h3>
-                        <p className="text-gray-100 leading-relaxed text-sm md:text-base">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Zentrix Edge */}
-        <section className=" rounded-3xl p-12 md:p-16 text-center animate-slide-in">
+        <section className="  p-12 md:p-16 text-center animate-slide-in bg-blue-900/10">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             The Zentrix Edge
           </h2>
@@ -241,7 +232,7 @@ useEffect(() => {
         </section>
     
   <Contactcomp />
-      <style jsx>{`
+          <style jsx>{`
         @keyframes fade-in-up {
           from { opacity: 0; transform: translateY(30px); }
           to { opacity: 1; transform: translateY(0); }

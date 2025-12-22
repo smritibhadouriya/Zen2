@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { navItems } from '../Data/NavbarItems';
-
+import logo from '../assets/logo.png'; // Replace with your actual logo image path
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -92,7 +92,7 @@ const Navbar = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="fixed w-full top-0 z-40 bg-gray-800 text-sm text-gray-600 py-2 md:px-6 lg:px-30">
+      <div className="fixed w-full top-0 z-40 bg-gray-800 text-sm text-gray-600 py-2 md:px-6 lg:px-10">
         <div className="max-w-7xl mx-auto px-4 md:px-0 lg:px-6 flex justify-between items-center text-md">
           <div className="text-white hidden sm:block ">
             India&apos;s Leading Digital Marketing Agency
@@ -109,7 +109,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <nav className="fixed w-full md:px-6 lg:px-30 z-50 bg-gray-100 top-8">
+      <nav className="fixed w-full md:px-6  z-50 bg-gray-100 top-8">
         <div className="max-w-7xl mx-auto px-4 md:px-0 lg:px-6 ">
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
@@ -117,16 +117,11 @@ const Navbar = () => {
                 className="flex justify-center items-center cursor-pointer"
                 onClick={() => navigate('/')}
               >
-                <h1 className="font-hangout text-3xl font-semibold tracking-tight">
-                  <span className="text-black">
-                    Z<span className="text-black">e</span>ntr
-                    <span className="relative inline-block">
-                      <span className="text-black">i</span>
-                      <span className="absolute -top-2.5 left-[0px] ">•</span>
-                    </span>
-                    <span className="text-black">x</span>
-                  </span>
-                </h1>
+                <img
+                  src= {logo}// Replace with your actual logo image path (e.g., import logo from '../assets/logo.png' and use src={logo})
+                  alt="Zentrix Logo"
+                  className="h-20 w-auto" // Adjust height as needed to match the original text size
+                />
               </div>
             </div>
 

@@ -8,7 +8,7 @@ const Mainpage = () => {
      <div className="fixed top-0 left-0 max-w-screen z-50">
          <Navbar />
       </div>
-      <main className="grow">
+      <main className="grow  mt-20">
         <Outlet />
       </main>
       <div  className=" max-w-screen">
