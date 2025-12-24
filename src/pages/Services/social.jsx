@@ -9,6 +9,7 @@ import { useInView } from "react-intersection-observer";
 import Contactcomp from "../../components/Contactcomp";
 import ParallaxBackground from "../../components/Parallex";
 import EnquiryModal from '../../components/Enquiry'; // Adjust the path if needed
+import socialbg from '../../assets/imagesuse/socialbg.jpg';
 const Social = () => {
   const location = useLocation();
   const [offsetY, setOffsetY] = useState(0);
@@ -74,11 +75,11 @@ useEffect(() => {
     <header
   className="relative text-center py-20 px-4 md:px-8 bg-cover bg-no-repeat overflow-hidden"
   style={{
-     backgroundImage: `url('https://media.gettyimages.com/id/1467438291/photo/connecting-with-social-media-network-via-smartphone.jpg?s=612x612&w=0&k=20&c=wxzoqsTy-lzDuda7TqIFts_qhdVYVIlJGCC383d2tRA=')`,
+     backgroundImage: `url('${socialbg}')`,
  
   }}
 >
-        <div className="absolute inset-0 bg-gray-800/40 z-0"></div>
+        <div className="absolute inset-0 bg-gray-800/50 z-0"></div>
         <div className="relative max-w-6xl mx-auto pt-30 z-10">
       <h1 className="text-4xl md:text-5xl  font-semibold mb-6 text-white leading-tight animate-fade-in-up">
             {headline}

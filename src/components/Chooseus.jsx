@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { } from "react-icons/fi"; // From Feather Icons (light & modern)
-import Performance1 from "../assets/imagesuse/performance.jpg";
+import Performance1 from "../assets/imagesuse/performance1.jpg";
 import social from "../assets/imagesuse/social.jpg";
 import web from "../assets/imagesuse/web.jpg";
 import { BiMinusCircle, BiPlusCircle } from "react-icons/bi";
@@ -98,7 +98,7 @@ export default function Chooseus() {
             </div>
 
             {/* Image (hidden on mobile) */}
-            <div className="hidden md:block relative h-64 sm:h-80 lg:h-96 xl:h-[490px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl order-2 lg:order-1">
+            <div className="hidden md:block relative h-64 sm:h-80 lg:h-96 xl:h-[460px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl order-2 lg:order-1">
               <img
                 src={tabs[activeTab === -1 ? 0 : activeTab].image}
                 alt={tabs[activeTab === -1 ? 0 : activeTab].title}

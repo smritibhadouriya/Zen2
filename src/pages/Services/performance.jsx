@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import { FaFunnelDollar, FaSearchDollar, FaChartPie, FaRocket } from "react-icons/fa";
 import Seo from "../../components/seo/Seo";
 import { useInView } from "react-intersection-observer";
-import Performancemarketing from '../../assets/imagesuse/performance.jpg';
+import Performancemarketing from '../../assets/imagesuse/performance1.jpg';
 import Contactcomp from "../../components/Contactcomp";
 import EnquiryModal from '../../components/Enquiry'; // Adjust the path if needed
 import Background from '../../assets/imagesuse/performancebg.jpg';
