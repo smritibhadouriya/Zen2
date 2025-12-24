@@ -57,14 +57,14 @@ const Blog = () => {
 
       {/* Tabs */}
       <section  className="py-7 overflow-hidden bg-blue-900/10">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="md:max-w-7xl md:mx-auto px-2 md:px-6">
           <div className="overflow-x-auto hide-scrollbar">
-            <div className="flex justify-center gap-3 whitespace-nowrap py-2">
+            <div className="flex justify-start md:justify-center gap-1 md:gap-3  py-2">
               {services.map((service) => (
                 <button
                   key={service}
                   onClick={() => setActiveTab(service)}
-                  className={`px-6 py-3 font-medium text-md md:text-lg transition-all duration-300 flex-shrink-0 text-xl mb-2 text-gray-800 leading-tight animate-fade-in-up${
+                  className={`px-6 py-3 font-medium text-md md:text-lg transition-all duration-300 flex-shrink-0 text-lg md:text-xl mb-2 text-gray-800 leading-tight animate-fade-in-up${
                     activeTab === service
                       ? 'border-b-2 border-pink-600 text-pink-600'
                       : 'text-gray-600 hover:text-pink-600 hover:border-b-2 hover:border-pink-600'
@@ -94,7 +94,7 @@ const Blog = () => {
                   tabIndex={0}
                   onClick={() => handleCardClick(study.title)}
                   onKeyDown={(e) => e.key === 'Enter' && handleCardClick(study.title)}
-                  className="relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer h-96 group"
+                  className="relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer h-40 lg:h-96  group"
                   style={{
                     backgroundImage: `url(${study.banner})`,
                     backgroundSize: 'cover',

@@ -27,7 +27,7 @@ const Blogsingle = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
         <div className="text-center">
-          <h1 className="text-4xl   font-semibold mb-6 text-gray-900 leading-tight animate-fade-in-up">Case Study Not Found</h1>
+          <h1 className="text-4xl font-semibold mb-6 text-gray-900 leading-tight animate-fade-in-up">Case Study Not Found</h1>
           <button
             onClick={() => navigate('/blog')}
             className="px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition"
@@ -47,15 +47,15 @@ const Blogsingle = () => {
 
   return (
     <div className="min-h-screen bg-pink-50 text-black">
-      <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10 flex flex-col lg:flex-row-reverse gap-10">
+      <div className="max-w-7xl mx-auto px-1 lg:px-8 py-10 flex flex-col lg:flex-row-reverse gap-10">
 
-        {/* ================= Sidebar (Right) ================= */}
-        <aside className="hidden lg:block w-80 sticky top-24 h-fit">
+        {/* ================= Sidebar (Right on large, below on small) ================= */}
+        <aside className="w-full lg:w-80 lg:sticky lg:top-30 lg:h-fit lg:self-start order-1 lg:order-2">
           <div className="bg-gray-100 rounded-2xl shadow-md p-6 space-y-10">
 
             {/* Related Blogs */}
             <div>
-              <h1 className="text-lg   font-semibold mb-4 text-gray-900 leading-tight animate-fade-in-up">
+              <h1 className="text-lg font-semibold mb-4 text-gray-900 leading-tight animate-fade-in-up">
                 Related {currentService}
               </h1>
 
@@ -96,7 +96,7 @@ const Blogsingle = () => {
 
             {/* More Services */}
             <div>
-             <h1 className="text-lg   font-semibold mb-4 text-gray-900 leading-tight animate-fade-in-up">
+              <h1 className="text-lg font-semibold mb-4 text-gray-900 leading-tight animate-fade-in-up">
                 More Services
               </h1>
 
@@ -122,22 +122,22 @@ const Blogsingle = () => {
           </div>
         </aside>
 
-        {/* ================= Main Content (Left) ================= */}
+        {/* ================= Main Content ================= */}
         <main className="flex-1">
-          <article className="bg-gray-100 rounded-3xl shadow-md p-6 md:p-10 lg:p-14">
-{/* Back Button */}
-<button
-  onClick={() => navigate('/blog')}
-  className="inline-flex items-center gap-2 mb-6 text-sm font-medium text-gray-600 hover:text-pink-600 transition group"
->
-  <span className="text-lg group-hover:-translate-x-1 transition-transform">
-    ←
-  </span>
-  Back to Blog
-</button>
+          <article className="bg-gray-100 rounded-3xl shadow-md p-6 md:p-10 lg:p-14 order-2 lg:order-1">
+            {/* Back Button */}
+            <button
+              onClick={() => navigate('/blog')}
+              className="inline-flex items-center gap-2 mb-6 text-sm font-medium text-gray-600 hover:text-pink-600 transition group"
+            >
+              <span className="text-lg group-hover:-translate-x-1 transition-transform">
+                ←
+              </span>
+              Back to Blog
+            </button>
 
             {/* Title */}
-           <h1 className="text-4xl   font-semibold mb-6 text-gray-900 leading-tight animate-fade-in-up">
+            <h1 className="text-4xl font-semibold mb-6 text-gray-900 leading-tight animate-fade-in-up">
               {study.title}
             </h1>
 

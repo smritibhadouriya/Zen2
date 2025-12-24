@@ -6,7 +6,7 @@ export const caseStudies = [
     view: 1840,
     description:
       'Transformed an outdated brand into a modern icon, boosting engagement by 70%.',
-    service: 'Social & Content',
+    service: 'SEO',
     top: true,
     content: `
       <article class="prose prose-lg max-w-none">
@@ -63,7 +63,7 @@ export const caseStudies = [
     view: 2240,
     description:
       'A multi-platform campaign that turned app downloads into loyal fans.',
-    service: 'Social & Content',
+    service: 'SEO',
     top: true,
    content: `
 <article class="prose prose-lg max-w-none">
@@ -113,7 +113,7 @@ export const caseStudies = [
     view: 3080,
     description:
       'Directed and produced a high-impact launch video viewed over 1M times.',
-    service: 'Social & Content',
+    service: 'Performance',
     content: `
 <article class="prose prose-lg max-w-none">
   <header class="mb-6">
