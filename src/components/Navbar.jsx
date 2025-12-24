@@ -249,14 +249,16 @@ const Navbar = () => {
               <div key={item.name} ref={item.name === 'Service' ? mobileServiceDropdownRef : null}>
                 {item.subItems ? (
                   <div>
-                    <button
-                      onClick={toggleServicesDropdown}
-                      className={`${
-                        isNavItemActive(item)
-                          ? 'text-[#EF4B93]'
-                          : 'text-[#111488]'
-                      } hover:text-[#EF4B93] transition-all duration-300 w-full text-left flex items-center py-3 px-4`}
-                    >
+                   <button
+  onClick={toggleServicesDropdown}
+  className={`${
+    isNavItemActive(item)
+      ? 'text-[#EF4B93]'
+      : 'text-[#111488]'
+  } hover:text-[#EF4B93] transition-all duration-300 
+     w-full text-left flex items-center py-3 px-4 text-lg`}
+>
+
                       {item.name}
                       <svg
                         className={`w-5 h-5 ml-2 transform ${isServicesOpen ? 'rotate-180' : ''}`}

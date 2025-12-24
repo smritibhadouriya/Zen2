@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { FaBrain, FaChartLine, FaRocket } from 'react-icons/fa';
 import { openPositions } from '../Data/Openpositions'; // Named import – make sure this matches your export
 
@@ -102,12 +102,13 @@ const Jobpost = () => {
 
         {/* Apply Button */}
         <div className="text-center mt-16">
-          <button
-            onClick={() => window.open('/contact', '_blank')}
-            className="border-1 border-white text-white hover:text-gray-900 font-bold py-4 px-12 rounded-lg text-xl hover:bg-white transition transform hover:scale-105"
-          >
-            APPLY NOW
-          </button>
+         <Link
+  to="/contact"
+  className="border border-white text-white hover:text-gray-900 font-bold py-4 px-12 rounded-lg text-xl hover:bg-white transition transform hover:scale-105"
+>
+  APPLY NOW
+</Link>
+
         </div>
 
         <div className="text-center mt-8">
