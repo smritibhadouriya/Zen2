@@ -19,7 +19,7 @@ const Footer = () => {
     <footer
       className="bg-gray-900 px-6 py-12 md:px-8 md:py-16  lg:py-24 relative overflow-hidden text-white"
     >
-      <div className="max-w-7xl mx-auto lg:px-8 relative z-10">
+      <div className="max-w-7xl md:mx-auto lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Section */}
           <div className="space-y-4">
