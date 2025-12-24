@@ -6,8 +6,6 @@ import { FaVideo, FaCommentDots, FaUsers, FaChartLine, FaPen, FaRocket } from "r
 import socialpage from '../../assets/imagesuse/socialpage.jpg'
 import Seo from "../../components/seo/Seo";
 import { useInView } from "react-intersection-observer";
-import SocialBanner from "../../assets/service/social.png"; // Banner image
-import background from '../../assets/bannerbg1.jpeg'
 import Contactcomp from "../../components/Contactcomp";
 import ParallaxBackground from "../../components/Parallex";
 import EnquiryModal from '../../components/Enquiry'; // Adjust the path if needed
