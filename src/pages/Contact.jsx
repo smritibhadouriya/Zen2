@@ -3,6 +3,7 @@ import { FaPaperPlane, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaTwitter, FaLin
 import { Link } from "react-router-dom";
 import Seo from "../components/seo/Seo";
 import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import BackgroundImage from "../assets/imagesuse/connectusbg.jpg";
 
 const Contact = () => {
   useEffect(() => {
@@ -19,18 +20,18 @@ const Contact = () => {
 
       {/* HERO */}
       <section 
-        className="relative w-full bg-cover bg-center bg-no-repeat overflow-hidden"
+        className="relative w-full bg-cover bg-no-repeat bg-center  overflow-hidden"
         style={{
-          backgroundImage: `url('https://img.freepik.com/premium-photo/young-man-using-his-smartphone-with-colorful-social-media-icons-floating-his-head_1187703-176119.jpg')`,
+          backgroundImage: `url('${BackgroundImage}')`,
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center">
-          <h1 className="text-4xl md:text-6xl font-semibold leading-tight mb-6 text-white">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-25 pb-20 text-center">
+         <h1 className="text-4xl md:text-5xl  font-semibold mb-6 text-white leading-tight animate-fade-in-up">
             Ready to Scale? <br />
             Let’s Crunch the Numbers.
           </h1>
-          <p className="max-w-3xl mx-auto text-lg text-white">
+         <p className="text-xl  text-white/80 mb-8 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
             No fluff. No sales scripts. Just honest strategy, clear execution,
             and growth that actually compounds.
           </p>
@@ -38,27 +39,27 @@ const Contact = () => {
       </section>
 
       {/* CONTENT */}
-      <section className="max-w-7xl mx-auto px-6 py-10  ">
+      <section className="max-w-7xl mx-auto px-6 py-15  ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
           {/* LEFT */}
                <div className="">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-gray-800 mb-4">
+            <h1 className="text-4xl   font-semibold mb-4 text-gray-900 leading-tight animate-fade-in-up">
               Start with a Conversation.
             </h1>
-            <p className="text-lg text-gray-600 mb-10 leading-relaxed">
+           <p className="text-xl  text-gray-800 mb-6 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
               Whether you’re a startup ready to disrupt or a legacy brand ready
               to evolve, the first step is clarity. Tell us about your goals,
               timeline, and ambition — we’ll tell you exactly how to get there.
             </p>
 
-            <div className="space-y-8">
+            <div className="space-y-4">
               <div className="flex items-center gap-5">
                 <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center text-blue-900 text-xl">
                   <FaEnvelope />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900">Email</p>
+                  <p className="text-lg  font-medium  text-gray-800 leading-tight animate-fade-in-up">Email</p>
                   <a
                     href="mailto:business@zentrix.media"
                     className="text-gray-600 hover:text-blue-900 transition"
@@ -73,15 +74,15 @@ const Contact = () => {
                   <FaMapMarkerAlt />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900">Location</p>
+                  <p className="text-lg  font-medium  text-gray-800 leading-tight animate-fade-in-up">Location</p>
                   <p className="text-gray-600">Mumbai, India</p>
                 </div>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="mt-12">
-              <p className="font-semibold text-gray-900 mb-4">Connect with us</p>
+            <div className="mt-10">
+               <p className="text-xl  font-medium  text-gray-800 leading-tight animate-fade-in-up mb-7">Connect with us</p>
               <div className="flex gap-6">
                 <a
                   href="https://instagram.com/zentrixmedia"
@@ -172,7 +173,7 @@ const Contact = () => {
       </section>
 
           <section className="">
-        <div className="max-w-7xl mx-auto p-6 text-center">
+        <div className="max-w-7xl mx-auto px-6 pb-5 text-center">
           <p className="text-lg font-semibold text-gray-800">
             “The best time to plant a tree was 20 years ago.
           </p>

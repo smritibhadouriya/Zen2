@@ -11,6 +11,7 @@ export const navItems = [
    
     ],
   },
+   { name: 'Blog', path: '/blog' },
   { name: 'About', path: '/about' },
   { name: 'Careers', path: '/career' },
   { name: 'Contact', path: '/contact' },

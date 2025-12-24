@@ -19,8 +19,7 @@ const Footer = () => {
     <footer
       className="bg-gray-900 px-6 py-12 md:px-8 md:py-16  lg:py-24 relative overflow-hidden text-white"
     >
-      {/* Subtle Background Overlay */}
-      <div className="absolute inset-0 bg-pink-500/5 pointer-events-none"></div>
+    
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">

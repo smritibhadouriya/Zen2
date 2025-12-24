@@ -42,10 +42,10 @@ export default function Chooseus() {
       <div className="relative z-10 py-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-gray-800 mb-4">
+            <h1 className="text-4xl   font-semibold mb-3 text-gray-900 leading-tight animate-fade-in-up">
               360° Digital Domination
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            </h1>
+            <p className="text-xl  font-medium mb-2 text-gray-800 leading-tight animate-fade-in-up">
               Comprehensive strategies that cover every angle of your digital presence.
             </p>
           </div>
@@ -61,21 +61,22 @@ export default function Chooseus() {
                   <div
                     key={index}
                     onClick={() => setActiveTab(isActive ? -1 : index)} // Toggle open/close
-                    className={`cursor-pointer rounded-2xl sm:rounded-3xl p-6 sm:p-8 transition-all duration-500 backdrop-blur-sm border flex items-start gap-5 group ${
+                    className={`cursor-pointer rounded-2xl sm:rounded-3xl p-6  transition-all duration-500 border-gray-400 backdrop-blur-sm border flex items-start gap-5 group ${
                       isActive
-                        ? "bg-white/90 border-white/70 shadow-2xl scale-100 lg:scale-105"
-                        : "bg-white/40 border-white/30 hover:bg-white/60"
+                        ? "bg-white/90  shadow-2xl scale-100 lg:scale-105"
+                        : "bg-white/40  hover:bg-white/60"
                     }`}
                   >
                   
 
                     {/* Content */}
                     <div className="flex-1">
-                      <h3 className="text-xl sm:text-2xl font-medium text-gray-900 mb-3">
+                      <h3 className="text-xl   font-medium mb-4 text-gray-900 leading-tight animate-fade-in-up">
                         {tab.title}
                       </h3>
                       <p
-                        className={`text-sm sm:text-base lg:text-xl text-gray-600 leading-relaxed transition-all duration-500 overflow-hidden ${
+                        className={`  leading-relaxed transition-all duration-500 overflow-hidden 
+                          text-xl  text-gray-800 mb-4  animate-fade-in-up animation-delay-300 ${
                           isActive ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
                         }`}
                       >
@@ -115,10 +116,10 @@ export default function Chooseus() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {stats.map((stat, index) => (
               <div key={index} className="flex flex-col items-center text-center">
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 tracking-tight">
+                <div className="text-4xl md:text-5xl   font-semibold mb-2 text-white leading-tight animate-fade-in-up">
                   {stat.value}
                 </div>
-                <div className="text-sm sm:text-base lg:text-lg text-white/80 leading-relaxed max-w-xs">
+                <div className="text-xl  text-white/80 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
                   {stat.label}
                 </div>
               </div>

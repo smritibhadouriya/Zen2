@@ -6,16 +6,19 @@ const Home = lazy(() => import('../../pages/Home'))
 const Contact = lazy(() => import('../../pages/Contact'))
 const About = lazy(() => import('../../pages/About'))
 const Career = lazy(() => import('../../pages/Career'))
-
+const Jobpost = lazy(() => import('../../pages/Jobpost'))
 const Loading = lazy(() => import('../../components/Loading'))
 const NotFound = lazy(() => import('../../components/NotFound'))
 const Privacy = lazy(() => import('../../components/Privacy'))
 const Terms = lazy(() => import('../../components/Terms'))
 
+
 const Social = lazy(() => import('../../pages/Services/social'))
 const Seo = lazy(() => import('../../pages/Services/Seo'))
 const Performance = lazy(() => import('../../pages/Services/performance'))
 const PR = lazy(() => import('../../pages/Services/Pr'))
+const Blog = lazy(() => import('../../pages/Blogs'))
+const Blogsingle = lazy(() => import('../../pages/Blogsingle'))
 
 import SubscribePopup from "../../components/SubscribePopup"
 const Auth = () => {
@@ -53,6 +56,9 @@ useEffect(() => {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/termsnservice" element={<Terms />} />
               <Route path="/career" element={<Career />} />
+              <Route path="/posting/:jobpost" element={<Jobpost />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:title" element={<Blogsingle />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -59,10 +59,10 @@ export default function EnquiryModal({ isOpen, onClose }) {
         />
 
         <div className="text-center mb-6">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
+          <h2 className="text-xl  font-medium mb-2 text-gray-800 leading-tight animate-fade-in-up">
             Struggling to Stand Out Online?
           </h2>
-          <p className="text-gray-600">
+          <p className="text-xl  text-gray-800 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
             Get an AI-powered digital marketing roadmap designed to scale your brand.
           </p>
         </div>
@@ -70,7 +70,7 @@ export default function EnquiryModal({ isOpen, onClose }) {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-1 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="text-md  font-medium mb-2 text-gray-800 leading-tight animate-fade-in-up">
                 Full Name *
               </label>
               <input
@@ -80,7 +80,7 @@ export default function EnquiryModal({ isOpen, onClose }) {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="text-md  font-medium mb-2 text-gray-800 leading-tight animate-fade-in-up">
                 Email Address *
               </label>
               <input
@@ -90,7 +90,7 @@ export default function EnquiryModal({ isOpen, onClose }) {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="text-md  font-medium mb-2 text-gray-800 leading-tight animate-fade-in-up">
                 Phone *
               </label>
               <input
@@ -102,7 +102,7 @@ export default function EnquiryModal({ isOpen, onClose }) {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="text-md  font-medium mb-2 text-gray-800 leading-tight animate-fade-in-up">
               Interested Service *
             </label>
             <select
@@ -123,7 +123,7 @@ export default function EnquiryModal({ isOpen, onClose }) {
 
           <button
             type="submit"
-            className="w-full bg-[#111488] text-white py-3 px-6 rounded-full font-medium transition-colors duration-300 hover:bg-[#111488]/90"
+            className="w-full bg-[#111488] text-white py-3 px-6 rounded-full font-medium  transition-colors  text-xl   leading-tight animate-fade-in-up duration-300 hover:bg-[#111488]/90 "
           >
             Send message
           </button>

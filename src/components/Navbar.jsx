@@ -95,7 +95,7 @@ const Navbar = () => {
       <div className="fixed w-full top-0 z-40 bg-gray-800 text-sm text-gray-600 py-2 md:px-6 lg:px-10">
         <div className="max-w-7xl mx-auto px-4 md:px-0 lg:px-6 flex justify-between items-center text-md">
           <div className="text-white hidden sm:block ">
-            India&apos;s Leading Digital Marketing Agency
+            India&apos;s Leading 360° Digital Marketing Agency
           </div>
           <div className="flex space-x-6 items-center">
             <a href="tel:+91-1234567890" className="text-white">
