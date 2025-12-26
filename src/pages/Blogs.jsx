@@ -17,7 +17,7 @@ const Blog = () => {
 
   const handleCardClick = (title) => {
     const slug = toSlug(title);
-    navigate(`/blo/${slug}`);
+    navigate(`/blog/${slug}`);
   };
 
   // Scroll behavior on route change
