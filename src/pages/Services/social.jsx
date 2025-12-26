@@ -79,7 +79,7 @@ useEffect(() => {
  
   }}
 >
-        <div className="absolute inset-0 bg-gray-800/50 z-0"></div>
+        <div className="absolute inset-0 bg-gray-800/40 z-0"></div>
         <div className="relative max-w-6xl mx-auto pt-30 z-10">
       <h1 className="text-4xl md:text-5xl  font-semibold mb-6 text-white leading-tight animate-fade-in-up">
             {headline}

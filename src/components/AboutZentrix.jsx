@@ -63,7 +63,7 @@ export default function WhyDifferent() {
             <div
               key={idx}
               className="step-card opacity-0 group"
-              style={{ animationDelay: `${idx * 300}ms` }}
+              style={{ animationDelay: `${idx * 50}ms` }}
             >
              <div className="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col h-full transform transition-all duration-500 group-hover:-translate-y-4 group-hover:shadow-2xl">
                 {/* Image First */}
@@ -80,8 +80,8 @@ export default function WhyDifferent() {
                 </div>
 
                 {/* Text Below */}
-                <div className="p-2 flex flex-col flex-grow">
-                  <h3 className="text-xl  font-medium mb-2 text-gray-800 leading-tight animate-fade-in-up">
+                <div className="p-2 flex flex-col flex-grow justify-start">
+                  <h3 className="text-xl  font-bold mb-2 text-gray-800 leading-tight animate-fade-in-up">
                     {item.title}
                   </h3>
                   <p className="text-xl  text-gray-800 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
