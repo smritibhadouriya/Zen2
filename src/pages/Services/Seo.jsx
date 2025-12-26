@@ -6,6 +6,7 @@ import { FaSearch, FaFileAlt, FaMapMarkerAlt, FaChartBar, FaRocket } from "react
 import Seo from "../../components/seo/Seo";
 import { useInView } from "react-intersection-observer";
 import Seomarketing from '../../assets/imagesuse/seomarketing.jpg';
+import Seobackground from '../../assets/imagesuse/seobackground.jpg';
 import Contactcomp from "../../components/Contactcomp";
 import EnquiryModal from '../../components/Enquiry'; // Adjust the path if needed
 
@@ -69,7 +70,7 @@ const SEO = () => {
      <header
   className="relative text-center py-15 lg:py-0 lg:pt-20 lg:pb-40  px-4 md:px-8 bg-no-repeat bg-center overflow-hidden"
   style={{
-    backgroundImage: `url('https://t3.ftcdn.net/jpg/06/20/50/68/360_F_620506847_D0TZytZuTVMXpuE4r5Tft27avIv6c6Xc.jpg')`,
+    backgroundImage: `url(${Seobackground})`,
     backgroundSize: 'cover',
   }}
 >

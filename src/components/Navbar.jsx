@@ -98,12 +98,8 @@ const Navbar = () => {
             India&apos;s Leading 360° Digital Marketing Agency
           </div>
           <div className="flex space-x-6 items-center">
-            <a href="tel:+91-1234567890" className="text-white">
-              +91-1234567890
-            </a>
-            <span className="text-gray-200">|</span>
             <a href="mailto:info@zentrix.com" className="text-white">
-              business@zentrix.media
+              hello@zentrix.media
             </a>
           </div>
         </div>

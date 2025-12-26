@@ -37,14 +37,15 @@ const Blog = () => {
   }, [location.pathname, location.state]);
   return (
     <>
-      {/* Hero Banner */}
-
+ 
       {/* Hero Header */}
       <header
         className="relative text-center py-20 md:py-32 px-4 md:px-8 bg-cover bg-no-repeat bg-center overflow-hidden"
-        style={{ backgroundImage: `url(${Background})` }}
+        style={{ backgroundImage: `url(${Background})` ,
+        loading: "lazy"
+      }}
       >
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/55"></div>
         <div className="relative max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-5xl  font-semibold mb-6 text-white leading-tight animate-fade-in-up">
             Delivering measurable results<br />with creative digital solutions.

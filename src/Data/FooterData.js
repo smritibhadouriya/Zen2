@@ -24,7 +24,7 @@ export const footerData = {
   ],
   contactInfo: [
     { icon: FaLocationDot , text: 'Mumbai, IN' },
-    { icon: FaMailBulk, text: 'business@zentrix.media' },
+    { icon: FaMailBulk, text: 'hello@zentrix.media' },
   ],
   footerLinks: [
 

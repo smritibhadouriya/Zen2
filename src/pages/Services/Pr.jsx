@@ -59,6 +59,7 @@ const PR = () => {
         keywords={seoData.keywords}
         href={seoData.href}
       />
+        <link rel="preload" href={Background} as="image" />
 
       {/* Hero Header - Exactly matches Social.jsx */}
       <header

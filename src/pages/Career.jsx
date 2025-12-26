@@ -92,12 +92,15 @@ const navigate = useNavigate();
 
   return (
     <div className="font-sans bg-white">
+        <link rel="preload" href={background} as="image" />
       <Seo title={seoData.title} description={seoData.description} keywords={seoData.keywords} href={seoData.href} />
 
       {/* Hero Header */}
       <header
         className="relative text-center py-20 md:py-32 px-4 md:px-8 bg-cover bg-no-repeat overflow-hidden"
-        style={{ backgroundImage: `url(${background})` }}
+        style={{ backgroundImage: `url(${background})` ,
+       loading: "lazy"}}
+
       >
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative max-w-6xl mx-auto">

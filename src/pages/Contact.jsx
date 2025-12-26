@@ -23,6 +23,7 @@ const Contact = () => {
         className="relative w-full bg-cover bg-no-repeat bg-center  overflow-hidden"
         style={{
           backgroundImage: `url('${BackgroundImage}')`,
+           loading: "lazy"
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
