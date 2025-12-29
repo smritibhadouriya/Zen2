@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { footerData } from '../Data/FooterData'; // Ensure the path and file name are correct
-import Logo from  '../assets/logo.png'
+import Logo from  '../assets/logowhite.png'
 const Footer = () => {
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -17,13 +17,16 @@ const Footer = () => {
 
   return (
     <footer
-      className="bg-gray-900 px-6 py-12 md:px-8 md:py-16  lg:py-24 relative overflow-hidden text-white"
+      className="bg-gray-950 px-3 py-12 md:px-8 md:py-16 lg:py-24 relative overflow-hidden text-white"
     >
       <div className="max-w-7xl md:mx-auto lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Section */}
-          <div className="space-y-4">
-           <img src={Logo} className='bg-white h-20 w-20 md:h-40 md:w-40' alt='company logo'/>
+          <div>
+            <div className=' h-20 w-20 md:h-40 md:w-35 '>
+                 <img src={Logo}  className='  h-full w-full' alt='company logo'/>
+            </div>
+          
             <div className="flex space-x-5">
               {footerData.company.socialLinks.map((link, index) => {
                 const Icon = link.icon;
@@ -31,11 +34,11 @@ const Footer = () => {
                   <Link
                     key={index}
                     href={link.href}
-                    className="text-gray-300 hover:text-pink-500 transform hover:scale-110 transition-all duration-300"
+                    className="text-white hover:text-pink-500 transform hover:scale-110 transition-all duration-300"
                     aria-label={`Visit our ${link.label}`}
                     role="link"
                   >
-                    <Icon className="w-5 h-5 md:w-7 md:h-7" />
+                    <Icon className="w-5 h-5" />
                   </Link>
                 );
               })}
@@ -52,7 +55,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     to={service.to}
-                    className="text-gray-300 hover:text-pink-500 hover:translate-x-1 transition-all duration-200"
+                    className="text-white hover:text-pink-500 hover:translate-x-1 transition-all duration-200"
                     aria-label={service.label}
                   >
                     {service.label}
@@ -72,7 +75,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     to={link.to}
-                    className="text-gray-300 hover:text-pink-500 hover:translate-x-1 transition-all duration-200"
+                    className="text-white hover:text-pink-500 hover:translate-x-1 transition-all duration-200"
                     aria-label={link.label}
                   >
                     {link.label}
@@ -95,12 +98,12 @@ const Footer = () => {
                     <span className="text-pink-500 mr-3">
                       <Icon className="w-6 h-6" />
                     </span>
-                    <span className="text-gray-300">{info.text}</span>
+                    <span className="text-white">{info.text}</span>
                   </li>
                 );
               })}
             </ul>
-            <form onSubmit={handleSubscribe} className="flex w-full max-w-sm mx-auto mt-6">
+            <form onSubmit={handleSubscribe} className="flex w-full max-w-sm  mt-6">
               <input
                 type="email"
                 name="email"
@@ -120,7 +123,7 @@ const Footer = () => {
               <Link
                 href="#"
                 onClick={handleUnsubscribe}
-                className="text-gray-300 hover:text-pink-500 transition-all duration-200"
+                className="text-white hover:text-pink-500 transition-all duration-200"
                 aria-label="Unsubscribe from newsletter"
               >
                 Unsubscribe
@@ -139,7 +142,7 @@ const Footer = () => {
               <Link
                 key={index}
                 to={link.to}
-                className="text-gray-300 hover:text-pink-500 transition-all duration-200"
+                className="text-white hover:text-pink-500 transition-all duration-200"
                 aria-label={link.label}
               >
                 {link.label}

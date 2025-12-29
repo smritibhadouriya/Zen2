@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Banner from '../components/Banner';
 import {  FaArrowUp} from 'react-icons/fa';
-import { testimonials } from '../Data/Testimonials';
 import Seo from '../components/seo/Seo';
 import OurServices from '../components/OurServices';
 import Chooseus from '../components/Chooseus';

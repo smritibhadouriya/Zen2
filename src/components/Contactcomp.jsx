@@ -18,7 +18,7 @@ const Contactcomp = () => {
         </div>
         {/* Right - Form */}
         <div className="flex">
-          <div className="w-full h-full bg-white px-10 py-5 flex flex-col justify-center"> {/* Removed min-h-[520px]; height now responsive to content */}
+          <div className="w-full h-full bg-white px-10 py-5  lg:pt-5 lg:pb-10 lg:py-0 flex flex-col justify-center"> {/* Removed min-h-[520px]; height now responsive to content */}
             <p className="text-xl  font-medium my-4 text-gray-700 leading-tight animate-fade-in-up">
               Tell us about your brand and goals. We’ll get back to you within 24 hours.
             </p>

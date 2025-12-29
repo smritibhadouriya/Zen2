@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { } from "react-icons/fi"; // From Feather Icons (light & modern)
 import Performance1 from "../assets/imagesuse/performance1.jpg";
 import social from "../assets/imagesuse/social.jpg";
@@ -35,6 +35,18 @@ export default function Chooseus() {
     { value: "98%", label: "Client Retention Rate" },
     { value: "24/7", label: "Real-time Optimization" },
   ];
+
+  // Auto-cycle effect: changes tab every 30 seconds, resets on manual interaction
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setActiveTab((prev) => {
+        if (prev === -1) return 0;
+        return (prev + 1) % tabs.length;
+      });
+    }, 10000); // 5 seconds
+
+    return () => clearTimeout(timer);
+  }, [activeTab, tabs.length]);
 
   return (
     <section className="relative overflow-hidden bg-blue-900/10">

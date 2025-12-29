@@ -76,6 +76,7 @@ useEffect(() => {
   className="relative text-center py-20 px-4 md:px-8 bg-cover bg-no-repeat overflow-hidden"
   style={{
      backgroundImage: `url('${socialbg}')`,
+      loading:'lazy',
  
   }}
 >

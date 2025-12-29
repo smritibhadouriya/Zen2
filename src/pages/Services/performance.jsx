@@ -63,9 +63,10 @@ const Performance = () => {
 
       {/* Hero Header - Exactly matches Social.jsx */}
       <header
-    className="relative text-center py-20 px-4 md:px-8 bg-cover bg-no-repeat overflow-hidden"
+    className="relative text-center py-20 lg:py-20 lg:pt-15 lg:pb-25 px-4 md:px-8 bg-cover bg-no-repeat overflow-hidden"
            style={{
              backgroundImage: `url(${Background})`,
+             loading:'lazy',
            }}
          >
            <div className="absolute inset-0 bg-gray-800/60 z-0"></div>

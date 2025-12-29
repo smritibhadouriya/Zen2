@@ -68,10 +68,11 @@ const SEO = () => {
 
       {/* Hero Header - Matches Social exactly */}
      <header
-  className="relative text-center py-15 lg:py-0 lg:pt-20 lg:pb-40  px-4 md:px-8 bg-no-repeat bg-center overflow-hidden"
+  className="relative text-center py-15 lg:py-0 lg:pt-15 lg:pb-40  px-4 md:px-8 bg-no-repeat bg-center overflow-hidden"
   style={{
     backgroundImage: `url(${Seobackground})`,
     backgroundSize: 'cover',
+    loading:'lazy',
   }}
 >
 

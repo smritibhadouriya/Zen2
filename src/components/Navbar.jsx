@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { navItems } from '../Data/NavbarItems';
 import logo from '../assets/logo.png'; // Replace with your actual logo image path
 const Navbar = () => {
@@ -92,15 +92,15 @@ const Navbar = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="fixed w-full top-0 z-40 bg-gray-800 text-sm text-gray-600 py-2 md:px-6 lg:px-10">
+      <div className="fixed w-full top-0 z-40 bg-gray-950 text-sm text-gray-600 py-2 md:px-6 lg:px-10">
         <div className="max-w-7xl mx-auto px-4 md:px-0 lg:px-6 flex justify-between items-center text-md">
           <div className="text-white hidden sm:block ">
             India&apos;s Leading 360° Digital Marketing Agency
           </div>
           <div className="flex space-x-6 items-center">
-            <a href="mailto:info@zentrix.com" className="text-white">
+            <Link to="mailto:hello@zentrix.media" className="text-white">
               hello@zentrix.media
-            </a>
+            </Link>
           </div>
         </div>
       </div>
