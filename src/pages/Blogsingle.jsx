@@ -30,7 +30,7 @@ const Blogsingle = () => {
           <h1 className="text-4xl font-semibold mb-6 text-gray-900 leading-tight animate-fade-in-up">Case Study Not Found</h1>
           <button
             onClick={() => navigate('/blog')}
-            className="px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition"
+            className="px-6 py-3 bg-[#F16D34] text-white rounded-lg hover:bg-[#F16D34]/90 transition"
           >
             Back to List
           </button>
@@ -46,7 +46,7 @@ const Blogsingle = () => {
   const allServices = [...new Set(caseStudies.map((s) => s.service))];
 
   return (
-    <div className="min-h-screen bg-pink-50 text-black">
+    <div className="min-h-screen bg-[#F16D34]/5 text-black">
       <div className="max-w-7xl mx-auto px-1 lg:px-8 py-10 flex flex-col lg:flex-row-reverse gap-10">
 
         {/* ================= Sidebar (Right on large, below on small) ================= */}
@@ -73,7 +73,7 @@ const Blogsingle = () => {
                       alt={item.title}
                       className="w-20 h-20 rounded-xl object-cover group-hover:opacity-80 transition"
                     />
-                    <p className="text-sm font-medium text-gray-800 group-hover:text-pink-600 transition line-clamp-2">
+                    <p className="text-sm font-medium text-gray-800 group-hover:text-[#F16D34] transition line-clamp-2">
                       {truncateRelatedTitle(item.title)}
                     </p>
                   </button>
@@ -86,7 +86,7 @@ const Blogsingle = () => {
                         state: { activeTab: currentService },
                       })
                     }
-                    className="text-pink-600 font-medium text-sm hover:underline"
+                    className="text-[#F16D34] font-medium text-sm hover:underline"
                   >
                     View all {currentService}
                   </button>
@@ -111,7 +111,7 @@ const Blogsingle = () => {
                           state: { activeTab: service },
                         })
                       }
-                      className="w-full text-left px-4 py-2 rounded-lg font-medium text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition"
+                      className="w-full text-left px-4 py-2 rounded-lg font-medium text-gray-700 hover:bg-[#F16D34]/10 hover:text-[#F16D34] transition"
                     >
                       {service}
                     </button>
@@ -128,7 +128,7 @@ const Blogsingle = () => {
             {/* Back Button */}
             <button
               onClick={() => navigate('/blog')}
-              className="inline-flex items-center gap-2 mb-6 text-sm font-medium text-gray-600 hover:text-pink-600 transition group"
+              className="inline-flex items-center gap-2 mb-6 text-sm font-medium text-gray-600 hover:text-[#F16D34] transition group"
             >
               <span className="text-lg group-hover:-translate-x-1 transition-transform">
                 ←
@@ -148,7 +148,7 @@ const Blogsingle = () => {
                 [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:mt-10
                 [&_p]:text-gray-700 [&_p]:leading-relaxed
                 [&_ul]:pl-0 [&_li]:mb-3 [&_li]:flex [&_li]:items-start
-                [&_blockquote]:border-l-4 [&_blockquote]:border-pink-500
+                [&_blockquote]:border-l-4 [&_blockquote]:border-[#F16D34]
                 [&_blockquote]:pl-6 [&_blockquote]:italic
               "
               dangerouslySetInnerHTML={{ __html: study.content }}

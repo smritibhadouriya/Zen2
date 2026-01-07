@@ -64,7 +64,7 @@ const Contactcomp = () => {
               />
               <button
                 type="submit"
-                className="w-full bg-blue-700 text-white py-4 rounded-full hover:bg-gradient-to-r hover:from-blue-800 hover:to-pink-700 transition shadow-lg" // Fixed hover classes to work with gradient
+                className="w-full bg-[#F16D34] text-white py-4 rounded-full hover:bg-[#F16D34]/90 transition shadow-lg" // Fixed hover classes to work with gradient
               >
                 Send Message
               </button>

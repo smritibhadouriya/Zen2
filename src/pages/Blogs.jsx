@@ -67,8 +67,8 @@ const Blog = () => {
                   onClick={() => setActiveTab(service)}
                   className={`px-6 py-3 font-medium text-md md:text-lg transition-all duration-300 flex-shrink-0 text-lg md:text-xl mb-2 text-gray-800 leading-tight animate-fade-in-up${
                     activeTab === service
-                      ? 'border-b-2 border-pink-600 text-pink-600'
-                      : 'text-gray-600 hover:text-pink-600 hover:border-b-2 hover:border-pink-600'
+                      ? 'border-b-2 border-[#F16D34] text-[#F16D34]'
+                      : 'text-gray-600 hover:text-[#F16D34] hover:border-b-2 hover:border-[#F16D34]'
                   }`}
                 >
                   {service}

@@ -88,7 +88,7 @@ export default function AboutUs() {
               />
             </div>
             <div className="space-y-8 order-2 lg:order-1">
-              <h1 className="text-4xl   font-semibold mb-6 text-gray-900 leading-tight animate-fade-in-up">
+              <h1 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px]  tracking-normal  mb-3 text-gray-900 animate-fade-in-up">
                 What we do?
               </h1>
                <p className="text-xl  text-gray-800 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
@@ -120,7 +120,7 @@ export default function AboutUs() {
               />
             </div>
             <div className="space-y-5 ">
-             <h1 className="text-4xl   font-semibold mb-6 text-gray-900 leading-tight animate-fade-in-up">
+             <h1 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px]  tracking-normal  mb-3 text-gray-900 animate-fade-in-up">
                 The Founder’s Story
               </h1>
               <p className="text-xl  text-gray-800 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
@@ -142,7 +142,8 @@ export default function AboutUs() {
         <div className="absolute inset-0 bg-white/10"></div>
         <div className="relative max-w-6xl mx-auto px-4 md:px-8 text-center space-y-12">
           <div>
-            <h1 className="text-4xl mb-2 text-white  animate-fade-in-up heading">Meet the Founders</h1>
+             <h1 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px] text-center  tracking-normal  mb-3 text-white animate-fade-in-up">
+              Meet the Founders</h1>
              <h2 className="text-xl  font-medium mb-2 text-white/80 leading-tight animate-fade-in-up">Young Blood. Old Souls. Sharp Minds.</h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3  gap-10">
@@ -179,7 +180,7 @@ export default function AboutUs() {
 {/* Updated "What Makes Us Different?" Section */}
       <section className="py-15 bg-blue-900/10">
         <div className="max-w-7xl mx-auto px-6">
-            <h1 className="text-4xl   font-semibold mb-15 text-gray-900 leading-tight animate-fade-in-up text-center">
+            <h1 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px] text-center tracking-normal  mb-6 text-gray-900 animate-fade-in-up">
             What Makes Us Different?
           </h1>
 
@@ -190,7 +191,7 @@ export default function AboutUs() {
                 key={index}
                 className={`group relative overflow-hidden rounded-3xl  shadow-xl transition-all duration-500 bg-white hover:scale-105 hover:shadow-2xl ${
             index === activeIndex
-              ? "ring-2 ring-pink-600 ring-offset-2 "
+              ? "ring-2 ring-[#F16D34] ring-offset-2 "
               : " hover:shadow-2xl"
           }`}
               >
@@ -207,7 +208,7 @@ export default function AboutUs() {
                  <div className="px-4 py-2 text-left space-y-2">
             <h3
               className={`  transition-colors duration-300 text-xl  font-medium mb-2  leading-tight animate-fade-in-up ${
-                index === activeIndex ? "text-pink-600" : "text-gray-800 group-hover:text-pink-600"
+                index === activeIndex ? "text-[#F16D34]" : "text-gray-800 group-hover:text-[#F16D34]"
               }`}
             >
               {item.title}
@@ -228,7 +229,7 @@ export default function AboutUs() {
         <div
           key={index}
           className={`h-2 rounded-full transition-all duration-500 ${
-            index === activeIndex ? "w-12 bg-pink-600" : "w-2 bg-gray-300"
+            index === activeIndex ? "w-12 bg-[#F16D34]" : "w-2 bg-gray-300"
           }`}
         />
       ))}
@@ -275,7 +276,7 @@ export default function AboutUs() {
                   key={index}
                   onClick={() => setActiveIndex(index)}
                   className={`h-2 rounded-full transition-all duration-500 ${
-                    index === activeIndex ? "w-12 bg-pink-600" : "w-2 bg-gray-300"
+                    index === activeIndex ? "w-12 bg-[#F16D34]" : "w-2 bg-gray-300"
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -288,7 +289,7 @@ export default function AboutUs() {
       </section>
 
       {/* Final CTA */}
-      <section className="pt-20 pb-2 text-center bg-gray-900">
+      <section className="pt-20 pb-2 text-center bg-[#2D2D2D]">
           <h1 className="text-4xl   font-semibold mb-6 text-white leading-tight animate-fade-in-up">
           Enough about us.<br className="sm:hidden  " /> Let’s talk about you.
         </h1>
@@ -297,7 +298,7 @@ export default function AboutUs() {
         </p>
         <button
           onClick={openEnquiry}
-          className="inline-flex items-center px-8 py-4 bg-pink-600 text-white font-bold text-lg rounded-full hover:bg-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse-slow"
+          className="inline-flex items-center px-8 py-4 bg-[#F16D34] text-white font-bold text-lg rounded-full hover:bg-[#F16D34]/90 transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse-slow"
         >
           Get in Touch <FaRocket className="ml-2" />
         </button>

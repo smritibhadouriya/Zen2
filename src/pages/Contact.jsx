@@ -45,7 +45,7 @@ const Contact = () => {
 
           {/* LEFT */}
                <div className="">
-            <h1 className="text-4xl   font-semibold mb-4 text-gray-900 leading-tight animate-fade-in-up">
+             <h1 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px]  tracking-normal  mb-3 text-gray-900 animate-fade-in-up">
               Start with a Conversation.
             </h1>
            <p className="text-xl  text-gray-800 mb-6 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">

@@ -79,7 +79,7 @@ const PR = () => {
           </p>
           <Link
             onClick={openEnquiry}
-            className="inline-flex items-center px-8 py-4 bg-pink-600 text-white font-bold text-lg rounded-full hover:bg-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse-slow relative z-10"
+            className="inline-flex items-center px-8 py-4 bg-[#F16D34] text-white font-bold text-lg rounded-full hover:bg-[#F16D34]/90 transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse-slow relative z-10"
           >
             Control Your Narrative <FaRocket className="ml-2" />
           </Link>
@@ -102,7 +102,7 @@ const PR = () => {
             </div>
             {/* Text content */}
             <div className="space-y-8 md:order-1">
-              <h1 className="text-4xl  font-semibold mb-6 text-gray-900 leading-tight animate-fade-in-up">
+               <h1 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px]  tracking-normal  mb-3 text-gray-900 animate-fade-in-up">
                Authority, Trust and Media Presence
               </h1>
               <p className="text-xl  text-gray-800 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
@@ -118,7 +118,7 @@ const PR = () => {
         <div className="absolute inset-0 bg-gray-100"></div>
         <div className="relative px-4 md:px-8 space-y-8 md:space-y-12">
           <div className="text-center space-y-4">
-           <h1 className="text-4xl  font-semibold mb-10 text-gray-900 leading-tight animate-fade-in-up"> 
+            <h1 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px]  tracking-normal text-center mb-3 text-gray-900 animate-fade-in-up">
               What We Deliver?
             </h1>
           </div>
@@ -143,7 +143,7 @@ const PR = () => {
                 >
                   <div className="text-center space-y-3 group h-full flex flex-col justify-center">
                     <div className="flex justify-center">
-                      <Icon className="text-3xl md:text-4xl text-pink-600 group-hover:scale-110 transition-transform duration-300" />
+                      <Icon className="text-3xl md:text-4xl text-[#F16D34] group-hover:scale-110 transition-transform duration-300" />
                     </div>
                     <h2 className="text-xl  font-medium mb-2 text-gray-800 leading-tight animate-fade-in-up">
                       {item.title}
@@ -166,7 +166,7 @@ const PR = () => {
           background: 'linear-gradient(180deg, #111488 0%, #0d1066 100%)',
         }}
       >
-         <h1 className="text-4xl  font-semibold mb-4 text-white leading-tight animate-fade-in-up">
+           <h1 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px]  tracking-normal text-center mb-3 text-white animate-fade-in-up">
           The Zentrix Edge
         </h1>
           <p className="text-xl  text-white/80 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">

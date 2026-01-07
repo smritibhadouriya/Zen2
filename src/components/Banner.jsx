@@ -45,7 +45,7 @@ export default function BannerSection() {
          
           <button
             onClick={openModal}
-            className="inline-flex items-center px-8 py-4 bg-pink-600 text-white font-bold text-lg rounded-full hover:bg-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse-slow"
+            className="inline-flex items-center px-8 py-4 bg-[#F16D34] text-white font-bold text-lg rounded-full hover:bg-[#F16D34]/80 transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse-slow"
           >
             Discover More
           </button>
