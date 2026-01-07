@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../assets/logo.png'; // Replace with the path to your image
+import Logo from '../assets/onlylogo.png'; // Replace with the path to your image
 const Loading = () => {
   return (
     <div
